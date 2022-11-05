@@ -1,0 +1,94 @@
+/* 
+font-family: 'Cherry Swash', cursive;
+font-family: 'Londrina Shadow', cursive;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'New Rocker', cursive;
+font-family: 'Pirata One', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rock Salt', cursive;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  color: darkorange;
+  font-family: 'New Rocker', cursive;
+  font-size: 60px;
+}
+
+.fire {
+  width: 100px;
+  position: relative;
+  bottom: 160px;
+  right: 100px;
+}
+
+.cabecalho {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+}
+
+.container {
+  padding-top: 100px;
+  display: flex;
+  width: 90vw;
+}
+
+.imagem {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+}
+
+.imagem h3 {
+  font-family: 'New Rocker', cursive;
+  color: crimson;
+  font-size: 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.imagem.slide {
+  flex: 5;
+}
+
+.imagem.slide h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 100vw;
+  }
+
+  .imagem:nth-of-type(4),
+  .imagem:nth-of-type(5) {
+    display: none;
+  }
+}
